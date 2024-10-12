@@ -6,7 +6,7 @@ public class Arrayelement {
 
         int max = Arrayelement.findMaxOccurence(arr);
        
-        byte[] maxNumbers = new byte[arr.length];
+        byte[] maxNumbers = new byte[arr.length]; //  maximum length of maxNumbers is arr.length
         int index = 0;
  
         int counter = 1;
@@ -21,13 +21,13 @@ public class Arrayelement {
                 }
             }
         }
-        byte[] result = Arrays.copyOfRange(maxNumbers, 0, index);
+        byte[] result = Arrays.copyOfRange(maxNumbers, 0, index); // in case maxNumbers.length < arr.length 
         return result;
     }
 
 
     static int findMaxOccurence (byte[] arr){
-        
+        // returns the number of the maximum occurence 
         Arrays.sort(arr);
         int counter = 1;
         int max = 1;
